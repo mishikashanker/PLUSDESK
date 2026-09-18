@@ -228,3 +228,52 @@ def get_digest():
         "updates": updates,
         "blockers": blockers
     }
+@app.get("/tasks")
+def get_tasks():
+
+    connection = sqlite3.connect("pulsedesk.db")
+    cursor = connection.cursor()
+
+    cursor.execute("""
+        SELECT
+            id,
+            name,
+            working_on,
+            blocker
+        FROM standups
+        ORDER BY id DESC
+    """)
+
+    rows = cursor.fetchall()
+
+    connection.close()
+
+    tasks = []
+
+    for row in rows:
+
+        blocker = row[3]
+
+        if blocker and blocker.lower() not in [
+            "no",
+            "none",
+            "no blockers",
+            "nothing"
+        ]:
+            status = "Blocked"
+        else:
+            status = "In Progress"
+
+        tasks.append({
+            "task_id": row[0],
+            "member": row[1],
+            "task": row[2],
+            "status": status,
+            "blocker": blocker,
+            "source_update_id": row[0]
+        })
+
+    return {
+        "count": len(tasks),
+        "tasks": tasks
+    }
