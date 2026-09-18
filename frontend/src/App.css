@@ -1,0 +1,545 @@
+/* ========================================
+   PulseDesk - Complete App Styling
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+
+/* ========================================
+   MAIN APP
+   ======================================== */
+
+.app {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e9f0;
+  padding: 20px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #4f46e5;
+}
+
+.header-text {
+  color: #667085;
+  font-size: 14px;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+   ======================================== */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 25px 60px;
+}
+
+
+/* ========================================
+   HERO
+   ======================================== */
+
+.hero {
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.hero p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+
+/* ========================================
+   GENERAL CARDS
+   ======================================== */
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 30px rgba(20, 30, 50, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 25px;
+  font-size: 22px;
+  color: #172033;
+}
+
+
+/* ========================================
+   FORM
+   ======================================== */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full {
+  grid-column: span 2;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 15px;
+
+  background: #ffffff;
+  border: 1px solid #d7dce5;
+  border-radius: 10px;
+
+  font-size: 15px;
+  color: #172033;
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #98a2b3;
+}
+
+.form-group input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+
+/* ========================================
+   BUTTON
+   ======================================== */
+
+button {
+  margin-top: 25px;
+  padding: 14px 24px;
+
+  background: #4f46e5;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   SUCCESS MESSAGE
+   ======================================== */
+
+.success {
+  margin: 18px 0 0;
+  padding: 12px 15px;
+
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  border-radius: 9px;
+
+  color: #15803d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   DAILY DIGEST
+   ======================================== */
+
+.digest-card {
+  background: #ffffff;
+}
+
+.digest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.digest-header h2 {
+  margin: 0 0 8px;
+}
+
+.digest-header p {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+}
+
+.digest-stats {
+  display: flex;
+  gap: 12px;
+}
+
+.stat {
+  min-width: 85px;
+  padding: 12px 16px;
+
+  background: #f4f6ff;
+  border-radius: 10px;
+
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 22px;
+  color: #4f46e5;
+}
+
+.stat span {
+  display: block;
+  margin-top: 3px;
+
+  font-size: 12px;
+  color: #667085;
+}
+
+.blocker-stat {
+  background: #fff7ed;
+}
+
+.blocker-stat strong {
+  color: #c2410c;
+}
+
+
+/* ========================================
+   BLOCKER SECTION
+   ======================================== */
+
+.blocker-section {
+  margin-top: 25px;
+}
+
+.blocker-section h3 {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+
+.digest-blocker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  padding: 16px;
+  margin-bottom: 12px;
+
+  background: #fffaf5;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+}
+
+.digest-blocker strong {
+  color: #172033;
+}
+
+.digest-blocker p {
+  margin: 5px 0 0;
+  color: #667085;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.source-id {
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+
+  background: #ffffff;
+  border: 1px solid #e5e9f0;
+  border-radius: 20px;
+
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.no-blockers {
+  margin-top: 20px;
+  padding: 15px;
+
+  background: #ecfdf3;
+  border: 1px solid #abefc6;
+  border-radius: 10px;
+
+  color: #15803d;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   TEAM UPDATES
+   ======================================== */
+
+.updates {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+/* ========================================
+   UPDATE CARD
+   ======================================== */
+
+.update-card {
+  background: #fafbfc;
+  border: 1px solid #e5e9f0;
+  border-radius: 14px;
+  padding: 22px;
+
+  transition: 0.2s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 30, 50, 0.07);
+}
+
+
+/* ========================================
+   UPDATE HEADER
+   ======================================== */
+
+.update-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.update-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #172033;
+}
+
+.update-id {
+  flex-shrink: 0;
+
+  padding: 5px 10px;
+
+  background: #eef0f5;
+  border-radius: 20px;
+
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   UPDATE INFORMATION
+   ======================================== */
+
+.update-row {
+  margin: 12px 0;
+
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.update-row strong {
+  display: inline-block;
+  width: 105px;
+
+  color: #344054;
+}
+
+
+/* ========================================
+   BLOCKER STATUS
+   ======================================== */
+
+.blocker {
+  color: #c2410c;
+  font-weight: 600;
+}
+
+.no-blocker {
+  color: #15803d;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 18px 25px;
+  }
+
+  .container {
+    padding: 35px 20px 50px;
+  }
+
+  .updates {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: span 1;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .digest-header {
+    flex-direction: column;
+  }
+
+  .digest-stats {
+    width: 100%;
+  }
+
+  .stat {
+    flex: 1;
+  }
+
+  .digest-blocker {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 500px) {
+
+  .header {
+    padding: 16px 18px;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .container {
+    padding: 25px 15px 40px;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .update-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .update-row strong {
+    display: block;
+    width: auto;
+    margin-bottom: 3px;
+  }
+}
