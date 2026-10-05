@@ -1,0 +1,7 @@
+# Run Caddy on the host. Replace hostname and configure DNS A/AAAA records.
+standup.example.com {
+    request_body {
+        max_size 32KB
+    }
+    reverse_proxy 127.0.0.1:8000
+}

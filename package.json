@@ -1,0 +1,11 @@
+{
+  "name": "pulsedesk-ui-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:ui": "node tests/frontend_smoke.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "20.14.5"
+  }
+}
